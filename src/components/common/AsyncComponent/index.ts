@@ -1,0 +1,1 @@
+export { asyncComponent } from "./AsyncComponent";

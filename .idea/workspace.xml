@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d40f164c-7f2d-43f0-ad97-1de6708e6907" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/typescript-compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nvmrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/meta/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/pages/1--about/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/pages/2--starters/gatsby-starter-simple-landing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/pages/2--starters/gatsby-styled-blog-starter.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/pages/2--starters/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/pages/2--starters/user-experience-notes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/pages/success/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/parts/author.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/parts/copyright.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/parts/footnote.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/parts/info.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-01--two-things-are-infinite/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-01--two-things-are-infinite/photo-1490474418585-ba9bad8fd0ea-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-01--two-things-are-infinite/photo-1490474418585-ba9bad8fd0ea.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-03--be-who-you-are/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-03--be-who-you-are/photo-1489824904134-891ab64532f1-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-03--be-who-you-are/photo-1489824904134-891ab64532f1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-05--you-only-live-once/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-05--you-only-live-once/photo-1456518563096-0ff5ee08204e-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-05--you-only-live-once/photo-1456518563096-0ff5ee08204e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-07--people-will-forget/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-07--people-will-forget/photo-1489900464632-5f5907edda24-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-07--people-will-forget/photo-1489900464632-5f5907edda24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-09--i-am-so-clever/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-09--i-am-so-clever/photo-1507124484497-b7f446e65519-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-09--i-am-so-clever/photo-1507124484497-b7f446e65519.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-11--imperfection-is-beauty/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-11--imperfection-is-beauty/photo-1469461084727-4bfb496cf55a-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-11--imperfection-is-beauty/photo-1469461084727-4bfb496cf55a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-13--there-are-only-two/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-13--there-are-only-two/photo-1451324119451-db0ac857463c-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-13--there-are-only-two/photo-1451324119451-db0ac857463c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-15--good-friends/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-15--good-friends/photo-1500531279542-fc8490c8ea4d-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-15--good-friends/photo-1500531279542-fc8490c8ea4d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-17--i-have-not-failed/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-17--i-have-not-failed/photo-1463852247062-1bbca38f7805-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-17--i-have-not-failed/photo-1463852247062-1bbca38f7805.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-19--i-may-not-have-gone/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-19--i-may-not-have-gone/photo-1507915600431-5292809c5ab7-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-19--i-may-not-have-gone/photo-1507915600431-5292809c5ab7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-21--like-nonsense/33893097-e5a70c34-df5a-11e7-8f5e-40e057626770.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-21--like-nonsense/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-21--like-nonsense/photo-1465070845512-2b2dbdc6df66-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-10-21--like-nonsense/photo-1465070845512-2b2dbdc6df66.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-01--two-things-are-infinite-2/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-01--two-things-are-infinite-2/photo-1490474418585-ba9bad8fd0ea-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-01--two-things-are-infinite-2/photo-1490474418585-ba9bad8fd0ea.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-03--be-who-you-are-2/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-03--be-who-you-are-2/photo-1489824904134-891ab64532f1-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-03--be-who-you-are-2/photo-1489824904134-891ab64532f1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-05--you-only-live-once-2/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-05--you-only-live-once-2/photo-1456518563096-0ff5ee08204e-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-05--you-only-live-once-2/photo-1456518563096-0ff5ee08204e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-07--people-will-forget-2/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-07--people-will-forget-2/photo-1489900464632-5f5907edda24-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-07--people-will-forget-2/photo-1489900464632-5f5907edda24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-09--i-am-so-clever-2/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-09--i-am-so-clever-2/photo-1507124484497-b7f446e65519-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-09--i-am-so-clever-2/photo-1507124484497-b7f446e65519.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-11--imperfection-is-beauty-2/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-11--imperfection-is-beauty-2/photo-1469461084727-4bfb496cf55a-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-11--imperfection-is-beauty-2/photo-1469461084727-4bfb496cf55a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-13--there-are-only-two-2/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-13--there-are-only-two-2/photo-1451324119451-db0ac857463c-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-13--there-are-only-two-2/photo-1451324119451-db0ac857463c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-15--good-friends-2/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-15--good-friends-2/photo-1500531279542-fc8490c8ea4d-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-15--good-friends-2/photo-1500531279542-fc8490c8ea4d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-17--i-have-not-failed-2/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-17--i-have-not-failed-2/photo-1463852247062-1bbca38f7805-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-17--i-have-not-failed-2/photo-1463852247062-1bbca38f7805.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-19--i-may-not-have-gone-2/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-19--i-may-not-have-gone-2/photo-1507915600431-5292809c5ab7-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-19--i-may-not-have-gone-2/photo-1507915600431-5292809c5ab7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-21--like-nonsense-2/33893097-e5a70c34-df5a-11e7-8f5e-40e057626770.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-21--like-nonsense-2/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-21--like-nonsense-2/photo-1465070845512-2b2dbdc6df66-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-11-21--like-nonsense-2/photo-1465070845512-2b2dbdc6df66.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-01--two-things-are-infinite-3/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-01--two-things-are-infinite-3/photo-1490474418585-ba9bad8fd0ea-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-01--two-things-are-infinite-3/photo-1490474418585-ba9bad8fd0ea.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-03--be-who-you-are-3/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-03--be-who-you-are-3/photo-1489824904134-891ab64532f1-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-03--be-who-you-are-3/photo-1489824904134-891ab64532f1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-05--you-only-live-once-3/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-05--you-only-live-once-3/photo-1456518563096-0ff5ee08204e-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-05--you-only-live-once-3/photo-1456518563096-0ff5ee08204e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-07--people-will-forget-3/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-07--people-will-forget-3/photo-1489900464632-5f5907edda24-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-07--people-will-forget-3/photo-1489900464632-5f5907edda24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-09--i-am-so-clever-3/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-09--i-am-so-clever-3/photo-1507124484497-b7f446e65519-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-09--i-am-so-clever-3/photo-1507124484497-b7f446e65519.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-11--imperfection-is-beauty-3/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-11--imperfection-is-beauty-3/photo-1469461084727-4bfb496cf55a-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-11--imperfection-is-beauty-3/photo-1469461084727-4bfb496cf55a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-13--there-are-only-two-3/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-13--there-are-only-two-3/photo-1451324119451-db0ac857463c-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-13--there-are-only-two-3/photo-1451324119451-db0ac857463c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-15--good-friends-3/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-15--good-friends-3/photo-1500531279542-fc8490c8ea4d-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-15--good-friends-3/photo-1500531279542-fc8490c8ea4d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-17--i-have-not-failed-3/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-17--i-have-not-failed-3/photo-1463852247062-1bbca38f7805-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-17--i-have-not-failed-3/photo-1463852247062-1bbca38f7805.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-19--i-may-not-have-gone-3/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-19--i-may-not-have-gone-3/photo-1507915600431-5292809c5ab7-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-19--i-may-not-have-gone-3/photo-1507915600431-5292809c5ab7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-21--like-nonsense-3/33893097-e5a70c34-df5a-11e7-8f5e-40e057626770.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-21--like-nonsense-3/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-21--like-nonsense-3/photo-1465070845512-2b2dbdc6df66-cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/2017-12-21--like-nonsense-3/photo-1465070845512-2b2dbdc6df66.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gatsby-browser.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gatsby-config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gatsby-node.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gatsby-ssr.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ActionsBar/ActionsBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ActionsBar/CategoryFilter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ActionsBar/FontSetter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ActionsBar/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/InfoBar/InfoBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/InfoBar/TopMenu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/InfoBar/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/InfoBox/InfoBox.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/InfoBox/InfoHeader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/InfoBox/InfoMenu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/InfoBox/InfoText.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/InfoBox/SocialIcons.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/InfoBox/StackIcons.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/InfoBox/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navigator/List.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navigator/ListHeader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navigator/ListItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navigator/Navigator.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navigator/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Seo/Seo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Seo/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SpringScrollbars/SpringScrollbars.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SpringScrollbars/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/AsyncComponent/AsyncComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/AsyncComponent/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Loading/Loading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Loading/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/declarations.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/app-icons/apple-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/app-icons/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/jpg/avatar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/svg-icons/algolia-full.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/svg-icons/algolia.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/svg-icons/babel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/svg-icons/email.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/svg-icons/facebook.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/svg-icons/gatsby.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/svg-icons/github.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/svg-icons/graphql.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/svg-icons/jss.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/svg-icons/material-ui.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/svg-icons/netlify.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/svg-icons/react.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/svg-icons/redux.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/svg-icons/twitter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/svg-icons/webpack.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/404.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/page-2.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/colors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/globals.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/theme.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templates/PageTemplate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templates/PostTemplate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/helpers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/shared.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/apple-icon-114x114.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/apple-icon-120x120.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/apple-icon-144x144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/apple-icon-152x152.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/apple-icon-180x180.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/apple-icon-57x57.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/apple-icon-60x60.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/apple-icon-72x72.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/apple-icon-76x76.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/favicon-96x96.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/icon-144x144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/icon-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/icon-256x256.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/icon-384x384.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/icon-48x48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/icon-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/icon-96x96.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tslint.json" afterDir="false" />
+    </list>
+    <ignored path="projx.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="projx" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="helpers.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/helpers.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="theme.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/styles/theme.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
+                <element signature="e#6385#6800#0" />
+                <element signature="e#6810#7190#0" />
+                <element signature="e#7205#7540#0" />
+                <element signature="e#7550#8561#0" />
+                <element signature="e#8573#8864#0" />
+                <element signature="e#8874#8990#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tslint.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tslint.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".nvmrc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.nvmrc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="6" selection-start-column="6" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="store.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/state/store.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="43" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gatsby-ssr.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gatsby-ssr.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tsconfig.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tsconfig.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.d.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/@types/react/index.d.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36570">
+              <caret line="2455" column="16" selection-start-line="2455" selection-start-column="16" selection-end-line="2455" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/static/tutorial-part-one/src/components/container.js" />
+        <option value="$PROJECT_DIR$/static/tutorial-part-one/src/pages/about-css-modules.module.css" />
+        <option value="$PROJECT_DIR$/static/tutorial-part-one/src/pages/about-css-modules.js" />
+        <option value="$PROJECT_DIR$/static/tutorial-part-one/src/pages/contact.js" />
+        <option value="$PROJECT_DIR$/static/tutorial-part-one/src/pages/index.js" />
+        <option value="$PROJECT_DIR$/static/tutorial-part-one/src/utils/typography.js" />
+        <option value="$PROJECT_DIR$/static/tutorial-part-one/src/layouts/index.js" />
+        <option value="$PROJECT_DIR$/static/tutorial-part-one/src/pages/about.js" />
+        <option value="$PROJECT_DIR$/static/tutorial-part-one/gatsby-config.js" />
+        <option value="$PROJECT_DIR$/src/layouts/index.css" />
+        <option value="$PROJECT_DIR$/src/pages/404.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/index.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/page-2.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Seo/Seo.ts" />
+        <option value="$PROJECT_DIR$/src/components/Seo/Seo.tsx" />
+        <option value="$PROJECT_DIR$/src/components/common/Loading/Loading.tsx" />
+        <option value="$PROJECT_DIR$/src/components/common/AsyncComponent/AsyncComponent.ts" />
+        <option value="$PROJECT_DIR$/src/components/common/AsyncComponent/AsyncComponent.tsx" />
+        <option value="$PROJECT_DIR$/src/components/common/AsyncComponent/index.ts" />
+        <option value="$PROJECT_DIR$/src/components/InfoBox/StackIcons.tsx" />
+        <option value="$PROJECT_DIR$/src/components/InfoBox/InfoBox.tsx" />
+        <option value="$PROJECT_DIR$/src/components/InfoBox/InfoMenu.tsx" />
+        <option value="$PROJECT_DIR$/src/components/InfoBox/InfoText.tsx" />
+        <option value="$PROJECT_DIR$/src/components/InfoBox/SocialIcons.tsx" />
+        <option value="$PROJECT_DIR$/src/components/InfoBox/InfoHeader.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Navigator/ListHeader.tsx" />
+        <option value="$PROJECT_DIR$/src/components/SpringScrollbars/SpringScrollbars.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Navigator/ListItem.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Navigator/List.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Navigator/Navigator.tsx" />
+        <option value="$PROJECT_DIR$/src/components/ActionsBar/FontSetter.tsx" />
+        <option value="$PROJECT_DIR$/src/components/ActionsBar/CategoryFilter.tsx" />
+        <option value="$PROJECT_DIR$/src/components/ActionsBar/ActionsBar.tsx" />
+        <option value="$PROJECT_DIR$/src/components/InfoBar/TopMenu.tsx" />
+        <option value="$PROJECT_DIR$/src/components/InfoBar/InfoBar.tsx" />
+        <option value="$PROJECT_DIR$/gatsby-ssr.js" />
+        <option value="$PROJECT_DIR$/gatsby-config.js" />
+        <option value="$PROJECT_DIR$/src/html.tsx" />
+        <option value="$PROJECT_DIR$/gatsby-browser.ts" />
+        <option value="$PROJECT_DIR$/gatsby-browser.tsx" />
+        <option value="$PROJECT_DIR$/gatsby-config.ts" />
+        <option value="$PROJECT_DIR$/src/declarations.d.ts" />
+        <option value="$PROJECT_DIR$/src/utils/shared.ts" />
+        <option value="$PROJECT_DIR$/src/styles/globals.ts" />
+        <option value="$PROJECT_DIR$/src/utils/helpers.ts" />
+        <option value="$PROJECT_DIR$/src/layouts/index.tsx" />
+        <option value="$PROJECT_DIR$/.nvmrc" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/styles/theme.ts" />
+        <option value="$PROJECT_DIR$/tsconfig.json" />
+        <option value="$PROJECT_DIR$/tslint.json" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="226" />
+    <option name="y" value="23" />
+    <option name="width" value="1454" />
+    <option name="height" value="1027" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="projx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projx" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v8.9.4/bin/node" />
+    <property name="js-tslint-nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v9.10.0/bin/node" />
+    <property name="js-tslint-package" value="$PROJECT_DIR$/node_modules/tslint" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="node.js.detected.package.prettier" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.prettier" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.prettier" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="node.js.selected.package.tslint" value="$PROJECT_DIR$/node_modules/tslint" />
+    <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v8.9.4/bin/node" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.tslint" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="typescript-compiler-editor-notification" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/images" />
+      <recent name="$PROJECT_DIR$/src/state" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d40f164c-7f2d-43f0-ad97-1de6708e6907" name="Default" comment="" />
+      <created>1521648887022</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1521648887022</updated>
+      <workItem from="1521648888832" duration="39553000" />
+      <workItem from="1522345653890" duration="3736000" />
+      <workItem from="1522350004587" duration="210000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="43499000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="226" y="23" width="1454" height="1027" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TypeScript" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2173315" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32985386" />
+      <window_info anchor="right" x="326" y="123" width="1254" height="827" id="Documentation" order="3" type="FLOATING" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/styles/theme.ts</url>
+          <line>309</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/images/jpg/avatar.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/InfoBox/InfoBox.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="63" column="19" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/InfoBox/InfoMenu.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/InfoBox/InfoText.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/svg-icons/github.svg">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/InfoBox/SocialIcons.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/InfoBox/StackIcons.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/InfoBox/InfoHeader.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Navigator/ListHeader.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="78" column="43" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Navigator/index.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SpringScrollbars/SpringScrollbars.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SpringScrollbars/index.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/InfoBar/index.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Navigator/ListItem.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Navigator/List.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Navigator/Navigator.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ActionsBar/ActionsBar.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ActionsBar/CategoryFilter.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ActionsBar/FontSetter.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ActionsBar/index.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/InfoBar/TopMenu.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/InfoBar/InfoBar.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/meta/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/PostTemplate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-642" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/PageTemplate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/app-icons/apple-icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/app-icons/icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.babelrc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/colors.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gatsby-node.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gatsby-browser.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gatsby-config.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="34" selection-start-line="34" selection-start-column="3" selection-end-line="39" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/declarations.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/react.d.ts" />
+    <entry file="file://$PROJECT_DIR$/node_modules/material-ui/styles/createTypography.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/render-page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536955">
+          <caret line="35797" column="37" selection-start-line="35797" selection-start-column="37" selection-end-line="35797" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/material-ui/styles/createMuiTheme.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/shared.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/globals.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4920">
+          <caret line="328" column="23" selection-start-line="328" selection-start-column="18" selection-end-line="328" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/react/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36570">
+          <caret line="2455" column="16" selection-start-line="2455" selection-start-column="16" selection-end-line="2455" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/helpers.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.nvmrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gatsby-ssr.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/jsonSchemas/tslint.json" />
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/state/store.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tslint.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/theme.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+            <element signature="e#6385#6800#0" />
+            <element signature="e#6810#7190#0" />
+            <element signature="e#7205#7540#0" />
+            <element signature="e#7550#8561#0" />
+            <element signature="e#8573#8864#0" />
+            <element signature="e#8874#8990#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
