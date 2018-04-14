@@ -5,13 +5,31 @@
   ],
   "jsRules": {},
   "rules": {
+    "quotemark": [
+      "single"
+    ],
+    "max-classes-per-file": [
+      true,
+      10
+    ],
+    "member-access": false,
+    "trailing-comma": [
+      false
+    ],
+    "object-literal-sort-keys": false,
+    "interface-name": [
+      "never-prefix"
+    ],
+    "arrow-parens": false,
     "ordered-imports": [
       false
     ],
     "no-console": [
-      true
+      false
     ],
-    "no-var-requires": false
+    "no-var-requires": false,
+    "object-literal-key-quotes": false,
+    "object-literal-shorthand": false
   },
   "rulesDirectory": []
 }

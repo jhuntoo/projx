@@ -1,50 +1,44 @@
-import * as React from "react";
-import injectSheet from "react-jss";
-import { MenuItem, MenuList } from "material-ui/Menu";
-import MoreVertIcon from "material-ui-icons/MoreVert";
-import IconButton from "material-ui/IconButton";
-import { Manager, Target, Popper } from "react-popper";
-import ClickAwayListener from "material-ui/utils/ClickAwayListener";
-import Grow from "material-ui/transitions/Grow";
-import Paper from "material-ui/Paper";
-import classNames from "classnames";
+import * as React from 'react';
+import injectSheet from 'react-jss';
+import { MenuItem, MenuList } from 'material-ui/Menu';
+import MoreVertIcon from 'material-ui-icons/MoreVert';
+import IconButton from 'material-ui/IconButton';
+import { Manager, Target, Popper } from 'react-popper';
+import ClickAwayListener from 'material-ui/utils/ClickAwayListener';
+import Grow from 'material-ui/transitions/Grow';
+import Paper from 'material-ui/Paper';
+import * as classNames from 'classnames';
+import {Theme} from 'material-ui';
 
-const styles = theme => ({
+const styles = (theme: Theme) => ({
   topMenu: {
-    float: "right",
-    margin: "5px 10px 0 0",
-    [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {}
+    float: 'right',
+    margin: '5px 10px 0 0',
+    [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {},
   },
-  buttonRoot: {
-    "&:hover": {
-      background: "rgba(0, 0, 0, 0.04)"
-    }
-  },
-  buttonLabel: {
-    textTransform: "none",
-    fontSize: "1.4em",
-    color: "#777"
+  open: {
+      color: theme.bars.colors.icon
   },
   popperClose: {
-    pointerEvents: "none"
-  }
+    pointerEvents: 'none',
+  },
 });
 
-class TopMenu extends React.Component<TopMenuProps> {
+class TopMenu extends React.Component<TopMenuProps, TopMenuState> {
   state = {
-    anchorEl: null,
-    open: false
+    anchorEl: null as any,
+    open: false,
   };
-
+    timeout?: number;
   componentWillUnmount() {
     clearTimeout(this.timeout);
   }
 
-  handleClick = () => {
+  handleClick() {
     this.setState({ open: !this.state.open });
-  };
+  }
 
-  handleClose = () => {
+  handleClose() {
     if (!this.state.open) {
       return;
     }
@@ -52,7 +46,7 @@ class TopMenu extends React.Component<TopMenuProps> {
     this.timeout = setTimeout(() => {
       this.setState({ open: false });
     });
-  };
+  }
 
   render() {
     const { classes, pages } = this.props;
@@ -64,9 +58,10 @@ class TopMenu extends React.Component<TopMenuProps> {
           <Target>
             <IconButton
               aria-label="More"
-              aria-owns={anchorEl ? "long-menu" : null}
+              aria-owns={anchorEl ? 'long-menu' : null}
               aria-haspopup="true"
-              onClick={this.handleClick}
+              onClick={() => this.handleClick()}
+              className={classes.open}
             >
               <MoreVertIcon />
             </IconButton>
@@ -76,8 +71,12 @@ class TopMenu extends React.Component<TopMenuProps> {
             eventsEnabled={open}
             className={classNames({ [classes.popperClose]: !open })}
           >
-            <ClickAwayListener onClickAway={this.handleClose}>
-              <Grow in={open} id="menu-list" style={{ transformOrigin: "0 0 0" }}>
+            <ClickAwayListener onClickAway={() => this.handleClose()}>
+              <Grow
+                in={open}
+                // id="menu-list"
+                style={{ transformOrigin: '0 0 0' }}
+              >
                 <Paper>
                   <MenuList role="menu">
                     <MenuItem
@@ -92,19 +91,25 @@ class TopMenu extends React.Component<TopMenuProps> {
                       const { fields, frontmatter } = page.node;
 
                       return (
-                        <a key={fields.slug} href={fields.slug} style={{ display: "block" }}>
+                        <a
+                          key={fields.slug}
+                          href={fields.slug}
+                          style={{ display: 'block' }}
+                        >
                           <MenuItem
                             onClick={e => {
                               this.props.pageLinkOnClick(e);
                               this.handleClose();
                             }}
                           >
-                            {frontmatter.menuTitle ? frontmatter.menuTitle : frontmatter.title}
+                            {frontmatter.menuTitle
+                              ? frontmatter.menuTitle
+                              : frontmatter.title}
                           </MenuItem>
                         </a>
                       );
                     })}
-                    <a href="/contact/" style={{ display: "block" }}>
+                    <a href="/contact/" style={{ display: 'block' }}>
                       <MenuItem
                         onClick={e => {
                           this.props.pageLinkOnClick(e);
@@ -124,12 +129,15 @@ class TopMenu extends React.Component<TopMenuProps> {
     );
   }
 }
-
+interface TopMenuState {
+    anchorEl: any;
+    open: boolean;
+}
 interface TopMenuProps {
   pages: any[];
   classes: any;
-  pageLinkOnClick: (event: any) => void;
-  homeLinkOnClick: (event: any) => void;
-};
+  pageLinkOnClick: (event: React.MouseEvent<HTMLElement>) => void;
+  homeLinkOnClick: (event: React.MouseEvent<HTMLElement>) => void;
+}
 
 export default injectSheet(styles)(TopMenu);

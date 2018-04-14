@@ -1,57 +1,59 @@
-import * as React from "react";
-import injectSheet from "react-jss";
-import Avatar from "material-ui/Avatar";
-import Link from "gatsby-link";
-import { connect } from "react-redux";
+import * as React from 'react';
+import injectSheet from 'react-jss';
+import Avatar from 'material-ui/Avatar';
+import Link from 'gatsby-link';
+import { connect } from 'react-redux';
 
-import { setNavigatorPosition } from "../../state/store";
-import { featureNavigator, moveNavigatorAside } from "./../../utils/shared";
+import {setNavigatorPosition, State} from '../../state/store';
+import { featureNavigator, moveNavigatorAside } from './../../utils/shared';
 
-import config from "../../../content/meta/config";
-import avatar from "../../images/jpg/avatar.jpg";
-import TopMenu from "./TopMenu";
+import avatar from '../../images/jpg/avatar.jpg';
+import TopMenu from './TopMenu';
+import {Theme} from 'material-ui';
+import {Config} from '../../../content/meta/config';
 
-const styles = theme => ({
+const styles = (theme: Theme) => ({
   infoBar: {
-    position: "absolute",
+    position: 'absolute',
     background: theme.bars.colors.background,
     top: 0,
     left: 0,
-    width: "100%",
+    width: '100%',
     height: `${theme.bars.sizes.infoBar}px`,
-    "&::before": {
+    '&::before': {
       content: `""`,
-      position: "absolute",
+      position: 'absolute',
       left: theme.base.sizes.linesMargin,
       right: theme.base.sizes.linesMargin,
       height: 0,
       bottom: 0,
-      borderTop: `1px solid ${theme.base.colors.lines}`
+      borderTop: `1px solid ${theme.base.colors.lines}`,
     },
     [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
-      display: "none"
-    }
+      display: 'none',
+    },
   },
   title: {
-    float: "left",
-    margin: "10px 0 0 15px",
-    "& small": {
-      display: "block",
-      fontSize: ".65em",
-      margin: "2px 0 0 0"
-    }
+    float: 'left',
+    margin: '10px 0 0 15px',
+    color: theme.bars.colors.text,
+    '& small': {
+      display: 'block',
+      fontSize: '.65em',
+      margin: '2px 0 0 0',
+    },
   },
   avatarLink: {
-    display: "block",
-    float: "left",
-    margin: "13px 0 0 30px"
+    display: 'block',
+    float: 'left',
+    margin: '13px 0 0 30px',
   },
   avatar: {
-    width: "36px",
-    borderRadius: "65% 75%",
-    border: "1px solid #ddd",
-    height: "36px"
-  }
+    width: '36px',
+    borderRadius: '65% 75%',
+    border: '1px solid #ddd',
+    height: '36px',
+  },
 });
 
 class InfoBar extends React.Component<InfoBarProps> {
@@ -63,12 +65,20 @@ class InfoBar extends React.Component<InfoBarProps> {
 
     return (
       <aside className={classes.infoBar}>
-        <Link to="/" className={classes.avatarLink} onClick={this.homeLinkOnClick}>
-          <Avatar alt={config.infoTitle} src={avatar} className={classes.avatar} />
+        <Link
+          to="/"
+          className={classes.avatarLink}
+          onClick={this.homeLinkOnClick}
+        >
+          <Avatar
+            alt={Config.infoTitle}
+            src={avatar}
+            className={classes.avatar}
+          />
         </Link>
         <h3 className={classes.title}>
-          {config.infoTitle}
-          <small>{config.infoTitleNote}</small>
+          {Config.infoTitle}
+          <small>{Config.infoTitleNote}</small>
         </h3>
         <TopMenu
           pages={pages}
@@ -81,19 +91,21 @@ class InfoBar extends React.Component<InfoBarProps> {
 }
 
 interface InfoBarProps {
-  classes: any;
-  pages: any[];
-};
+  classes?: any;
+  pages: AllMarkdownRemark;
+}
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state: State, ownProps: InfoBarProps) => {
   return {
     navigatorPosition: state.navigatorPosition,
-    navigatorShape: state.navigatorShape
+    navigatorShape: state.navigatorShape,
   };
 };
 
 const mapDispatchToProps = {
-  setNavigatorPosition
+  setNavigatorPosition,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(injectSheet(styles)(InfoBar));
+export default connect(mapStateToProps, mapDispatchToProps)(
+  injectSheet(styles)(InfoBar)
+);

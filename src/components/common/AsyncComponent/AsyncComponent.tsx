@@ -1,40 +1,34 @@
-import * as React from "react";
+import * as React from 'react';
+interface AsyncComponentState {
+    component: React.ComponentClass<any> | React.StatelessComponent<any> | null;
+}
 
-export const asyncComponent = (getComponent, loadingComponent) => class AsyncComponent extends React.Component<any, any> {
-  state : {
-    Component : any
-  }
+// noinspection TsLint
+export const asyncComponent = function <P>(importComponent: () => Promise<any>, loadingComponent?: JSX.Element) {
+    class AsyncComponent extends React.Component<P, AsyncComponentState> {
+        constructor(props: any) {
+            super(props);
 
-  private Component : React.Component;
+            this.state = {
+                component: null
+            };
+        }
 
-  constructor(props:Object){
-    super(props);
+        componentDidMount() {
+            importComponent().then((module: any) => {
+                const { default: component } = module;
+                this.setState({
+                    component: component
+                });
+            });
+        }
 
-    this.Component = null;
+        render() {
+            const C = this.state.component;
 
-    this.state = {
-      Component : this.Component
+            return C ? <C {...this.props} /> : loadingComponent ? loadingComponent : <div>Loading...</div>;
+        }
     }
-  }
 
-    componentDidMount() {
-      if (!this.state.Component) {
-        getComponent().then(Component => {
-          this.setState({ Component });
-        });
-      }
-    }
-
-    componentWillUnmount(){
-      this.setState({Component: {}});
-    }
-    render():JSX.Element {
-      const { Component } = this.state;
-      if (Component) {
-        return <Component {...this.props} />;
-      }
-      return loadingComponent ? loadingComponent : <div>Loading...</div>;
-    }
-  }
-
-
+    return AsyncComponent;
+};

@@ -1,15 +1,12 @@
+import {Config} from './content/meta/config';
+/// <reference path="src/declarations.d.ts" />
 require("dotenv").config();
-const config = require("./content/meta/config");
-
 
 import * as path from "path";
 
 interface IGatsbyConfig {
-    siteMetadata: {
-        siteUrl: string;
-        title: string;
-    };
-    plugins: Array<string | { resolve: string; options?: Object }>;
+    siteMetadata: SiteMetadata;
+    plugins: Array<string | { resolve: string; options?: {} }>;
 }
 
 const query = `{
@@ -42,18 +39,18 @@ const query = `{
 const GATSBY_CONFIG: IGatsbyConfig = {
     siteMetadata: {
         title: `Gatsby Typescript Starter`,
-        description: config.siteDescription,
-        siteUrl: config.siteUrl,
-        pathPrefix: config.pathPrefix,
+        description: Config.siteDescription,
+        siteUrl: Config.siteUrl,
+        pathPrefix: Config.pathPrefix,
         algolia: {
-            appId: process.env['ALGOLIA_APP_ID'] ? process.env['ALGOLIA_APP_ID'] : "",
-            searchOnlyApiKey: process.env['ALGOLIA_SEARCH_ONLY_API_KEY']
-                ? process.env['ALGOLIA_SEARCH_ONLY_API_KEY']
+            appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : "",
+            searchOnlyApiKey: process.env.ALGOLIA_SEARCH_ONLY_API_KEY
+                ? process.env.ALGOLIA_SEARCH_ONLY_API_KEY
                 : "",
-            indexName: process.env['ALGOLIA_INDEX_NAME'] ? process.env['ALGOLIA_INDEX_NAME'] : ""
+            indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : ""
         },
         facebook: {
-            appId: process.env['FB_APP_ID'] ? process.env['FB_APP_ID'] : ""
+            appId: process.env.FB_APP_ID ? process.env.FB_APP_ID : ""
         }
     },
     plugins: [
@@ -110,12 +107,12 @@ const GATSBY_CONFIG: IGatsbyConfig = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: config.manifestName,
-                short_name: config.manifestShortName,
-                start_url: config.manifestStartUrl,
-                background_color: config.manifestBackgroundColor,
-                theme_color: config.manifestThemeColor,
-                display: config.manifestDisplay,
+                name: Config.manifestName,
+                short_name: Config.manifestShortName,
+                start_url: Config.manifestStartUrl,
+                background_color: Config.manifestBackgroundColor,
+                theme_color: Config.manifestThemeColor,
+                display: Config.manifestDisplay,
                 icons: [
                     {
                         src: "/icons/icon-48x48.png",
@@ -159,7 +156,7 @@ const GATSBY_CONFIG: IGatsbyConfig = {
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
-                trackingId: process.env['GOOGLE_ANALYTICS_ID']
+                trackingId: process.env.GOOGLE_ANALYTICS_ID
             }
         },
         {
@@ -179,13 +176,15 @@ const GATSBY_CONFIG: IGatsbyConfig = {
         `,
                 feeds: [
                     {
-                        serialize: ({ query: { site, allMarkdownRemark } }) => {
-                            return allMarkdownRemark.edges.map(edge => {
+                        serialize: (obj: any) => {
+                            const site = obj.query.site;
+                            const allMarkdownRemark = obj.query.allMarkdownRemark;
+                            return allMarkdownRemark.edges.map((edge: any) => {
                                 return Object.assign({}, edge.node.frontmatter, {
                                     description: edge.node.excerpt,
                                     url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                                     guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                                    custom_elements: [{ "content:encoded": edge.node.html }]
+                                    custom_elements: [{"content:encoded": edge.node.html}]
                                 });
                             });
                         },
@@ -200,9 +199,9 @@ const GATSBY_CONFIG: IGatsbyConfig = {
                     node {
                       excerpt
                       html
-                      fields { 
+                      fields {
                         slug
-                        prefix 
+                        prefix
                       }
                       frontmatter {
                         title
@@ -226,8 +225,14 @@ const GATSBY_CONFIG: IGatsbyConfig = {
                 dir: `svg-icons`
             }
         },
-        `gatsby-plugin-typescript`
+        `gatsby-plugin-typescript`,
+        {
+            resolve: 'gatsby-plugin-netlify-cms',
+            options: {
+                modulePath: `${__dirname}/src/cms/cms.tsx`,
+            },
+        },
     ],
-}
+};
 
 export = GATSBY_CONFIG;

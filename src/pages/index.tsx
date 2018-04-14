@@ -1,43 +1,60 @@
-import * as React from 'react'
-import Link from 'gatsby-link'
+import * as React from "react";
+import { connect } from "react-redux";
 
-// Please note that you can use https://github.com/dotansimha/graphql-code-generator
-// to generate all types from graphQL schema
-interface IndexPageProps {
-    data: {
-        site: {
-            siteMetadata: {
-                title: string
-            }
+import {NavigatorPosition, setNavigatorPosition, setNavigatorShape, State} from "../state/store";
+import { featureNavigator } from "../utils/shared";
+import Seo from "../components/Seo";
+
+class Index extends React.Component<IndexProps> {
+    featureNavigator = featureNavigator.bind(this);
+
+    componentWillMount() {
+        if (this.props.navigatorPosition !== "is-featured") {
+            this.props.setNavigatorPosition("is-featured");
         }
     }
-}
 
-export default class extends React.Component<IndexPageProps, {}> {
-    constructor(props: IndexPageProps, context: any) {
-        super(props, context)
-    }
-    public render() {
+    render() {
+        const { data } = this.props;
+        const facebook = (((data || {}).site || {}).siteMetadata || {}).facebook;
+
         return (
             <div>
-                <h1>Hi people</h1>
-                <p>
-                    Welcome to your new{' '}
-                    <strong>{this.props.data.site.siteMetadata.title}</strong> site.
-                </p>
-                <p>Now go build something great.</p>
-                <Link to="/page-2/">Go to page 2</Link>
+                <Seo facebook={facebook} />
             </div>
-        )
+        );
     }
 }
+
+interface IndexProps {
+    data: any;
+    navigatorPosition: NavigatorPosition;
+    setNavigatorPosition: (p: NavigatorPosition) => any;
+    isWideScreen: boolean;
+}
+
+const mapStateToProps = (state: State, ownProps: IndexProps): Partial<IndexProps> => {
+    return {
+        navigatorPosition: state.navigatorPosition,
+        isWideScreen: state.isWideScreen
+    };
+};
+
+const mapDispatchToProps = {
+    setNavigatorPosition,
+    setNavigatorShape
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Index);
 
 export const pageQuery = graphql`
   query IndexQuery {
     site {
       siteMetadata {
-        title
+        facebook {
+          appId
+        }
       }
     }
   }
-`
+`;

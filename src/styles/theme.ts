@@ -1,460 +1,449 @@
-import { createMuiTheme} from "material-ui/styles";
+import {createMuiTheme} from 'material-ui/styles';
 import * as React from 'react';
-import * as Color from "color";
-import { Theme } from 'material-ui/styles/createMuiTheme';
+import * as Color from 'color';
+import {Direction, Theme} from 'material-ui/styles/createMuiTheme';
+import {PaletteType} from 'material-ui';
+import {CommonColors} from 'material-ui/colors/common';
+import {default as createPalette, PaletteColorOptions, PaletteOptions} from 'material-ui/styles/createPalette';
+import {Colors} from './colors';
 
-const colors = require("./colors");
+
 
 declare module 'material-ui/styles/createMuiTheme' {
+    interface Theme {
+        base: {
+            colors: {
+                background: React.CSSProperties['color']
+                text: React.CSSProperties['color']
+                link: React.CSSProperties['color']
+                linkHover: React.CSSProperties['color']
+                accent: React.CSSProperties['color']
+                lines: React.CSSProperties['color']
+            }
+            sizes: {
+                linesMargin: React.CSSProperties['margin']
+            }
+            fonts: {
+                unstyledFamily: React.CSSProperties['fontFamily']
+                styledFamily: React.CSSProperties['fontFamily']
+                styledFonts: React.CSSProperties['fontFamily']
+            }
+        };
+        info: {
+            colors: {
+                text: React.CSSProperties['color']
+                background: React.CSSProperties['color']
+                socialIcons: React.CSSProperties['color']
+                socialIconsHover: React.CSSProperties['color']
+                menuLink: React.CSSProperties['color']
+                menuLinkHover: React.CSSProperties['color']
+            }
+            sizes: {
+                width: number
+                height: number;
+                headerHeight: number
+            }
+            fonts: {
+                boxTitleSize: React.CSSProperties['fontSize']
+                boxTitleSizeM: React.CSSProperties['fontSize']
+                boxTitleSizeL: React.CSSProperties['fontSize']
+            }
+        };
+        navigator: {
+            colors: {
+                background: React.CSSProperties['color']
+                postsListItemLink: React.CSSProperties['color']
+                postsListItemLinkHover: React.CSSProperties['color']
+                postsHeader: React.CSSProperties['color']
+            }
+            sizes: {
+                closedHeight: number
+                postsListItemH1Font: number
+                postsListItemH2Font: number
+                fontIncraseForM: number
+                fontIncraseForL: number
+            }
+        };
+        main: {
+            colors: {
+                background: React.CSSProperties['color']
+                title: React.CSSProperties['color']
+                subTitle: React.CSSProperties['color']
+                meta: React.CSSProperties['color']
+                content: React.CSSProperties['color']
+                footer: React.CSSProperties['color']
+                contentHeading: React.CSSProperties['color']
+                blockquoteFrame: React.CSSProperties['color']
+                link: React.CSSProperties['color']
+                linkHover: React.CSSProperties['color']
+                fbCommentsColorscheme: string;
+            }
+            sizes: {
+                articleMaxWidth: React.CSSProperties['maxWidth']
+                maxWidth: React.CSSProperties['maxWidth']
+            }
+            fonts: {
+                title: {
+                    size: React.CSSProperties['fontSize']
+                    sizeM: React.CSSProperties['fontSize']
+                    sizeL: React.CSSProperties['fontSize']
+                    weight: React.CSSProperties['fontWeight']
+                    lineHeight: React.CSSProperties['lineHeight']
+                }
+                subTitle: {
+                    size: React.CSSProperties['fontSize']
+                    sizeM: React.CSSProperties['fontSize']
+                    sizeL: React.CSSProperties['fontSize']
+                    weight: React.CSSProperties['fontWeight']
+                    lineHeight: React.CSSProperties['lineHeight']
+                }
+                meta: {
+                    size: React.CSSProperties['fontSize']
+                    weight: React.CSSProperties['fontWeight']
+                }
+                content: {
+                    size: React.CSSProperties['fontSize']
+                    sizeM: React.CSSProperties['fontSize']
+                    sizeL: React.CSSProperties['fontSize']
+                    lineHeight: React.CSSProperties['lineHeight']
+                }
+                contentHeading: {
+                    h2Size: React.CSSProperties['fontSize']
+                    h3Size: React.CSSProperties['fontSize']
+                    weight: React.CSSProperties['fontWeight']
+                    lineHeight: React.CSSProperties['lineHeight']
+                }
+                footer: {
+                    size: React.CSSProperties['fontSize']
+                    lineHeight: React.CSSProperties['lineHeight']
+                }
+            }
+        };
+        footer: {
+            colors: {
+                text: React.CSSProperties['color']
+                link: React.CSSProperties['color']
+                linkHover: React.CSSProperties['color']
+            }
+            fonts: {
+                footnote: {
+                    size: React.CSSProperties['fontSize']
+                    lineHeight: React.CSSProperties['lineHeight']
+                }
+            }
+        };
+        bars: {
+            colors: {
+                background: React.CSSProperties['color']
+                icon: React.CSSProperties['color']
+                text: React.CSSProperties['color']
+            }
+            sizes: {
+                actionsBar: number
+                infoBar: number
+            }
+        };
+        mediaQueryTresholds: {
+            M: number
+            L: number
+        };
+    }
 
-  interface Theme {
-    base: {
-      colors: {
-        background: React.CSSProperties['color'];
-        text: string;
-        link: string;
-        linkHover: string;
-        accent: string;
-        lines: string;
-      },
-      sizes: {
-        linesMargin: string;
-      },
-      fonts: {
-        unstyledFamily: string;
-        styledFamily: string;
-        styledFonts: string;
-      }
+    // allow configuration using `createMuiTheme`
+    interface ThemeOptions {
+        base?: {
+            colors: {
+                background: React.CSSProperties['color']
+                text: React.CSSProperties['color']
+                link: React.CSSProperties['color']
+                linkHover: React.CSSProperties['color']
+                accent: React.CSSProperties['color']
+                lines: React.CSSProperties['color']
+            }
+            sizes: {
+                linesMargin: React.CSSProperties['margin']
+            }
+            fonts: {
+                unstyledFamily: React.CSSProperties['fontFamily']
+                styledFamily: React.CSSProperties['fontFamily']
+                styledFonts: React.CSSProperties['fontFamily']
+            }
+        };
+        info?: {
+            colors: {
+                text: React.CSSProperties['color']
+                background: React.CSSProperties['color']
+                socialIcons: React.CSSProperties['color']
+                socialIconsHover: React.CSSProperties['color']
+                menuLink: React.CSSProperties['color']
+                menuLinkHover: React.CSSProperties['color']
+            }
+            sizes: {
+                width: number
+                height: number;
+                headerHeight: number
+            }
+            fonts: {
+                boxTitleSize: React.CSSProperties['fontSize']
+                boxTitleSizeM: React.CSSProperties['fontSize']
+                boxTitleSizeL: React.CSSProperties['fontSize']
+            }
+        };
+        navigator?: {
+            colors: {
+                background: React.CSSProperties['color']
+                postsListItemLink: React.CSSProperties['color']
+                postsListItemLinkHover: React.CSSProperties['color']
+                postsHeader: React.CSSProperties['color']
+            }
+            sizes: {
+                closedHeight: number
+                postsListItemH1Font: number
+                postsListItemH2Font: number
+                fontIncraseForM: number
+                fontIncraseForL: number
+            }
+        };
+        main?: {
+            colors: {
+                background: React.CSSProperties['color']
+                title: React.CSSProperties['color']
+                subTitle: React.CSSProperties['color']
+                meta: React.CSSProperties['color']
+                content: React.CSSProperties['color']
+                footer: React.CSSProperties['color']
+                contentHeading: React.CSSProperties['color']
+                blockquoteFrame: React.CSSProperties['color']
+                link: React.CSSProperties['color']
+                linkHover: React.CSSProperties['color']
+                fbCommentsColorscheme: string;
+            }
+            sizes: {
+                articleMaxWidth: React.CSSProperties['maxWidth']
+                maxWidth: React.CSSProperties['maxWidth']
+            }
+            fonts: {
+                title: {
+                    size: React.CSSProperties['fontSize']
+                    sizeM: React.CSSProperties['fontSize']
+                    sizeL: React.CSSProperties['fontSize']
+                    weight: React.CSSProperties['fontWeight']
+                    lineHeight: React.CSSProperties['lineHeight']
+                }
+                subTitle: {
+                    size: React.CSSProperties['fontSize']
+                    sizeM: React.CSSProperties['fontSize']
+                    sizeL: React.CSSProperties['fontSize']
+                    weight: React.CSSProperties['fontWeight']
+                    lineHeight: React.CSSProperties['lineHeight']
+                }
+                meta: {
+                    size: React.CSSProperties['fontSize']
+                    weight: React.CSSProperties['fontWeight']
+                }
+                content: {
+                    size: React.CSSProperties['fontSize']
+                    sizeM: React.CSSProperties['fontSize']
+                    sizeL: React.CSSProperties['fontSize']
+                    lineHeight: React.CSSProperties['lineHeight']
+                }
+                contentHeading: {
+                    h2Size: React.CSSProperties['fontSize']
+                    h3Size: React.CSSProperties['fontSize']
+                    weight: React.CSSProperties['fontWeight']
+                    lineHeight: React.CSSProperties['lineHeight']
+                }
+                footer: {
+                    size: React.CSSProperties['fontSize']
+                    lineHeight: React.CSSProperties['lineHeight']
+                }
+            }
+        };
+        footer?: {
+            colors: {
+                text: React.CSSProperties['color']
+                link: React.CSSProperties['color']
+                linkHover: React.CSSProperties['color']
+            }
+            fonts: {
+                footnote: {
+                    size: React.CSSProperties['fontSize']
+                    lineHeight: React.CSSProperties['lineHeight']
+                }
+            }
+        };
+        bars?: {
+            colors?: {
+                background: React.CSSProperties['color']
+                icon: React.CSSProperties['color']
+                text: React.CSSProperties['color']
+            }
+            sizes?: {
+                actionsBar: number
+                infoBar: number
+            }
+        };
+        mediaQueryTresholds?: {
+            M: number
+            L: number
+        };
     }
-    info: {
-      colors: {
-        text: string;
-        background: string;
-        socialIcons: string;
-        socialIconsHover: string;
-        menuLink: string;
-        menuLinkHover: string;
-      },
-      sizes: {
-        width: number;
-        headerHeight: number;
-      },
-      fonts: {
-        boxTitleSize: number;
-        boxTitleSizeM: number;
-        boxTitleSizeL: number;
-      }
-    },
-    navigator: {
-      colors: {
-        background: string;
-        postsListItemLink: string;
-        postsListItemLinkHover: string;
-        postsHeader: string;
-      },
-      sizes: {
-        closedHeight: number;
-        postsListItemH1Font: number;
-        postsListItemH2Font: number;
-        fontIncraseForM: number;
-        fontIncraseForL: number;
-      }
-    },
-    main: {
-      colors: {
-        background: string;
-        title: string;
-        subTitle: string;
-        meta: string;
-        content: string;
-        footer: string;
-        contentHeading: string;
-        blockquoteFrame: string;
-        link: string;
-        linkHover: string;
-      },
-      sizes: {
-        articleMaxWidth: string;
-      },
-      fonts: {
-        title: {
-          size: number;
-          sizeM: number;
-          sizeL: number;
-          weight: number;
-          lineHeight: number;
-        },
-        subTitle: {
-          size: number;
-          sizeM: number;
-          sizeL: number;
-          weight: number;
-          lineHeight: number;
-        },
-        meta: {
-          size: number;
-          weight: number;
-        },
-        content: {
-          size: number;
-          sizeM: number;
-          sizeL: number;
-          lineHeight: number;
-        },
-        contentHeading: {
-          h2Size: number;
-          h3Size: number;
-          weight: number;
-          lineHeight: number;
-        },
-        footer: {
-          size: number;
-          lineHeight: number;
-        }
-      }
-    },
-    footer: {
-      colors: {
-        text: string;
-        link: string;
-        linkHover: string;
-      },
-      fonts: {
-        footnote: {
-          size: number;
-          lineHeight: number;
-        }
-      }
-    },
-    bars: {
-      colors: {
-        background: string;
-      },
-      sizes: {
-        actionsBar: number;
-        infoBar: number;
-      }
-    },
-    mediaQueryTresholds: {
-      M: number;
-      L: number;
-    },
-    palette: {
-      primary: {
-        main: React.CSSProperties['color'];
-      }
-    },
-    typography: {
-      fontFamily: React.CSSProperties['fontFamily'];
-      fontSize: React.CSSProperties['fontSize'];
-    },
-    pallete: {
-      action: {
-        hover: string;
-      }
-    }
-  }
-  // allow configuration using `createMuiTheme`
-  interface ThemeOptions {
-    base: {
-      colors: {
-        background: string;
-        text: string;
-        link: string;
-        linkHover: string;
-        accent: string;
-        lines: string;
-      },
-      sizes: {
-        linesMargin: string;
-      },
-      fonts: {
-        unstyledFamily: string;
-        styledFamily: string;
-        styledFonts: string;
-      }
-    }
-    info: {
-      colors: {
-        text: string;
-        background: string;
-        socialIcons: string;
-        socialIconsHover: string;
-        menuLink: string;
-        menuLinkHover: string;
-      },
-      sizes: {
-        width: number;
-        headerHeight: number;
-      },
-      fonts: {
-        boxTitleSize: number;
-        boxTitleSizeM: number;
-        boxTitleSizeL: number;
-      }
-    },
-    navigator: {
-      colors: {
-        background: string;
-        postsListItemLink: string;
-        postsListItemLinkHover: string;
-        postsHeader: string;
-      },
-      sizes: {
-        closedHeight: number;
-        postsListItemH1Font: number;
-        postsListItemH2Font: number;
-        fontIncraseForM: number;
-        fontIncraseForL: number;
-      }
-    },
-    main: {
-      colors: {
-        background: string;
-        title: string;
-        subTitle: string;
-        meta: string;
-        content: string;
-        footer: string;
-        contentHeading: string;
-        blockquoteFrame: string;
-        link: string;
-        linkHover: string;
-      },
-      sizes: {
-        articleMaxWidth: string;
-      },
-      fonts: {
-        title: {
-          size: number;
-          sizeM: number;
-          sizeL: number;
-          weight: number;
-          lineHeight: number;
-        },
-        subTitle: {
-          size: number;
-          sizeM: number;
-          sizeL: number;
-          weight: number;
-          lineHeight: number;
-        },
-        meta: {
-          size: number;
-          weight: number;
-        },
-        content: {
-          size: number;
-          sizeM: number;
-          sizeL: number;
-          lineHeight: number;
-        },
-        contentHeading: {
-          h2Size: number;
-          h3Size: number;
-          weight: number;
-          lineHeight: number;
-        },
-        footer: {
-          size: number;
-          lineHeight: number;
-        }
-      }
-    },
-    footer: {
-      colors: {
-        text: string;
-        link: string;
-        linkHover: string;
-      },
-      fonts: {
-        footnote: {
-          size: number;
-          lineHeight: number;
-        }
-      }
-    },
-    bars: {
-      colors: {
-        background: string;
-      },
-      sizes: {
-        actionsBar: number;
-        infoBar: number;
-      }
-    },
-    mediaQueryTresholds: {
-      M: number;
-      L: number;
-    },
-    palette: {
-      primary: {
-        main: string;
-      }
-    },
-    typography: {
-      fontFamily: string;
-      fontSize: number;
-    },
-    pallete: {
-      action: {
-        hover: string;
-      }
-    }
-  }
 }
 
-
 export const theme: Theme = createMuiTheme({
-  base: {
-    colors: {
-      background: colors.white,
-      text: colors.dark,
-      link: colors.accent,
-      linkHover: Color(colors.accent)
-        .lighten(0.1)
-        .string(),
-      accent: colors.accent,
-      lines: colors.superLightGray
+    base: {
+        colors: {
+            background: Colors.background,
+            text: Colors.dark,
+            link: Colors.accent,
+            linkHover: Color(Colors.accent)
+                .lighten(0.1)
+                .string(),
+            accent: Colors.accent,
+            lines: Colors.superLightGray,
+        },
+        sizes: {
+            linesMargin: '20px',
+        },
+        fonts: {
+            unstyledFamily: `Arial`,
+            styledFamily: 'Open Sans',
+            styledFonts: '300,400,600',
+        },
     },
-    sizes: {
-      linesMargin: "20px"
+    info: {
+        colors: {
+            text: Colors.gray,
+            background: Colors.background,
+            socialIcons: Colors.lightGray,
+            socialIconsHover: Colors.accent,
+            menuLink: Colors.gray,
+            menuLinkHover: Colors.accent,
+        },
+        sizes: {
+            width: 320,
+            height: null,
+            headerHeight: 170,
+        },
+        fonts: {
+            boxTitleSize: 1.3,
+            boxTitleSizeM: 1.5,
+            boxTitleSizeL: 1.7,
+        },
     },
-    fonts: {
-      unstyledFamily: `Arial`,
-      styledFamily: "Open Sans",
-      styledFonts: "300,400,600"
-    }
-  },
-  info: {
-    colors: {
-      text: colors.gray,
-      background: colors.white,
-      socialIcons: colors.lightGray,
-      socialIconsHover: colors.accent,
-      menuLink: colors.gray,
-      menuLinkHover: colors.accent
+    navigator: {
+        colors: {
+            background: Colors.background,
+            postsListItemLink: Colors.gray,
+            postsListItemLinkHover: Colors.accent,
+            postsHeader: Colors.gray,
+        },
+        sizes: {
+            closedHeight: 80,
+            postsListItemH1Font: 1.3,
+            postsListItemH2Font: 1.1,
+            fontIncraseForM: 1.15,
+            fontIncraseForL: 1.3,
+        },
     },
-    sizes: {
-      width: 320,
-      headerHeight: 170
+    main: {
+        colors: {
+            background: Colors.background,
+            title: Colors.gray,
+            subTitle: Colors.gray,
+            meta: Colors.gray,
+            content: Colors.dark,
+            footer: Colors.gray,
+            contentHeading: Colors.gray,
+            blockquoteFrame: Colors.lightGray,
+            link: Colors.accent,
+            linkHover: Colors.dark,
+            fbCommentsColorscheme: "light"
+        },
+        sizes: {
+            articleMaxWidth: '50em',
+            maxWidth: '50em'
+        },
+        fonts: {
+            title: {
+                size: 1.9,
+                sizeM: 2.5,
+                sizeL: 2.7,
+                weight: 600,
+                lineHeight: 1.1,
+            },
+            subTitle: {
+                size: 1.5,
+                sizeM: 1.8,
+                sizeL: 1.95,
+                weight: 300,
+                lineHeight: 1.1,
+            },
+            meta: {
+                size: 0.9,
+                weight: 600,
+            },
+            content: {
+                size: 1.0,
+                sizeM: 1.15,
+                sizeL: 1.1,
+                lineHeight: 1.6,
+            },
+            contentHeading: {
+                h2Size: 1.5,
+                h3Size: 1.3,
+                weight: 600,
+                lineHeight: 1.3,
+            },
+            footer: {
+                size: 1,
+                lineHeight: 1.4,
+            },
+        },
     },
-    fonts: {
-      boxTitleSize: 1.3,
-      boxTitleSizeM: 1.5,
-      boxTitleSizeL: 1.7
-    }
-  },
-  navigator: {
-    colors: {
-      background: colors.white,
-      postsListItemLink: colors.gray,
-      postsListItemLinkHover: colors.accent,
-      postsHeader: colors.gray
+    footer: {
+        colors: {
+            text: Color(Colors.gray)
+                .lighten(0.5)
+                .string(),
+            link: Colors.accent,
+            linkHover: Color(Colors.accent)
+                .lighten(0.2)
+                .string(),
+        },
+        fonts: {
+            footnote: {
+                size: 0.8,
+                lineHeight: 1.4,
+            },
+        },
     },
-    sizes: {
-      closedHeight: 80,
-      postsListItemH1Font: 1.3,
-      postsListItemH2Font: 1.1,
-      fontIncraseForM: 1.15,
-      fontIncraseForL: 1.3
-    }
-  },
-  main: {
-    colors: {
-      background: colors.white,
-      title: colors.gray,
-      subTitle: colors.gray,
-      meta: colors.gray,
-      content: colors.dark,
-      footer: colors.gray,
-      contentHeading: colors.gray,
-      blockquoteFrame: colors.lightGray,
-      link: colors.accent,
-      linkHover: colors.dark
+    bars: {
+        colors: {
+            background: Colors.background,
+            icon: Colors.gray,
+            text: Colors.gray
+        },
+        sizes: {
+            actionsBar: 60,
+            infoBar: 60,
+        },
     },
-    sizes: {
-      articleMaxWidth: "50em"
+    mediaQueryTresholds: {
+        M: 600,
+        L: 1024,
     },
-    fonts: {
-      title: {
-        size: 1.9,
-        sizeM: 2.5,
-        sizeL: 2.7,
-        weight: 600,
-        lineHeight: 1.1
-      },
-      subTitle: {
-        size: 1.5,
-        sizeM: 1.8,
-        sizeL: 1.95,
-        weight: 300,
-        lineHeight: 1.1
-      },
-      meta: {
-        size: 0.9,
-        weight: 600
-      },
-      content: {
-        size: 1.0,
-        sizeM: 1.15,
-        sizeL: 1.1,
-        lineHeight: 1.6
-      },
-      contentHeading: {
-        h2Size: 1.5,
-        h3Size: 1.3,
-        weight: 600,
-        lineHeight: 1.3
-      },
-      footer: {
-        size: 1,
-        lineHeight: 1.4
-      }
-    }
-  },
-  footer: {
-    colors: {
-      text: Color(colors.gray)
-        .lighten(0.5)
-        .string(),
-      link: colors.accent,
-      linkHover: Color(colors.accent)
-        .lighten(0.2)
-        .string()
+    typography: {
+        fontFamily: `Arial, sans-serif`,
+        fontSize: 16,
     },
-    fonts: {
-      footnote: {
-        size: 0.8,
-        lineHeight: 1.4
-      }
-    }
-  },
-  bars: {
-    colors: {
-      background: colors.white
-    },
-    sizes: {
-      actionsBar: 60,
-      infoBar: 60
-    }
-  },
-  mediaQueryTresholds: {
-    M: 600,
-    L: 1024
-  },
-  palette: {
-    primary: {
-      main: "#709425"
-    }
-  },
-  typography: {
-    fontFamily: `Arial, sans-serif`,
-    fontSize: 16
-  },
-  pallete: {
-    action: {
-      hover: "rgba(0, 0, 0, 0.01)"
-    }
-  }
+    palette: {
+        primary: {
+            main: Colors.accent,
+        },
+        action: {
+            hover: 'rgba(0, 0, 0, 0.01)',
+        },
+    } as PaletteOptions,
+    direction: 'ltr'
 });

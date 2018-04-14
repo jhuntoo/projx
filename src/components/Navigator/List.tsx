@@ -1,18 +1,20 @@
-import * as React from "react";
-import injectSheet from "react-jss";
-import { forceCheck } from "react-lazyload";
+import * as React from 'react';
+import injectSheet from 'react-jss';
+import { forceCheck } from 'react-lazyload';
 
-import ListHeader from "./ListHeader";
-import SpringScrollbars from "../SpringScrollbars";
-import ListItem from "./ListItem";
+import ListHeader from './ListHeader';
+import SpringScrollbars from '../SpringScrollbars';
+import ListItem from './ListItem';
+import {Theme} from 'material-ui';
+import {NavigatorPosition, NavigatorShape} from '../../state/store';
 
-const styles = theme => ({
+const styles = (theme: Theme) => ({
   posts: {
-    position: "absolute",
+    position: 'absolute',
     left: 0,
     top: 0,
     bottom: 0,
-    width: "100%"
+    width: '100%',
   },
   inner: {
     padding: `calc(${theme.bars.sizes.infoBar}px + 1.3rem) 1.3rem calc(${
@@ -21,28 +23,28 @@ const styles = theme => ({
     [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
       padding: `calc(${theme.bars.sizes.infoBar}px + 2rem) 2rem calc(${
         theme.bars.sizes.actionsBar
-      }px + 2rem) 2rem`
+      }px + 2rem) 2rem`,
     },
     [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
       padding: `2rem  calc(1rem + 17px) calc(2rem + 17px) 2rem`,
       left: `${theme.info.sizes.width}px`,
-      ".moving-featured &, .is-aside &": {
-        padding: "1rem .5rem 1rem .5rem"
-      }
-    }
+      '.moving-featured &, .is-aside &': {
+        padding: '1rem .5rem 1rem .5rem',
+      },
+    },
   },
   list: {
-    listStyle: "none",
+    listStyle: 'none',
     margin: 0,
     padding: 0,
-    ".is-aside.closed &, .moving-featured.closed &": {
-      display: "none"
-    }
-  }
+    '.is-aside.closed &, .moving-featured.closed &': {
+      display: 'none',
+    },
+  },
 });
 
 class List extends React.Component<ListProps, {}> {
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps: ListProps, prevState: any) {
     if (prevProps.categoryFilter !== this.props.categoryFilter) {
       setTimeout(forceCheck, 300);
     }
@@ -56,7 +58,7 @@ class List extends React.Component<ListProps, {}> {
       expandOnClick,
       categoryFilter,
       navigatorShape,
-      removeFilter
+      removeFilter,
     } = this.props;
 
     return (
@@ -89,13 +91,13 @@ class List extends React.Component<ListProps, {}> {
 
 interface ListProps {
   classes: any;
-  posts: any[];
-  linkOnClick: (event: any) => void;
-  expandOnClick: (event: any) => void;
-  navigatorPosition: string;
-  navigatorShape: string;
+  readonly posts: MarkdownRemarkEdges;
+  linkOnClick: (event: React.MouseEvent<HTMLElement>) => void;
+  expandOnClick: (event: React.MouseEvent<HTMLElement>) => void;
+  navigatorPosition: NavigatorPosition;
+  navigatorShape: NavigatorShape;
   categoryFilter: string;
   removeFilter: () => void;
-};
+}
 
 export default injectSheet(styles)(List);

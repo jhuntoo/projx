@@ -1,24 +1,24 @@
-import React from "react";
-import { Router } from "react-router-dom";
-import { Provider } from "react-redux";
+import * as React from 'react';
+import { Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { History } from 'history';
 
-import createStore from "./src/state/store";
+import {createStore} from "./src/state/store";
 
 // remove the JSS style tag generated on the server to avoid conflicts with the one added on the client
-exports.onInitialClientRender = function() {
-    // eslint-disable-next-line no-undef
-    var ssStyles = window.document.getElementById("server-side-jss");
-    ssStyles && ssStyles.parentNode.removeChild(ssStyles);
+export const onInitialClientRender = () => {
+    const ssStyles = window.document.getElementById("server-side-jss");
+    if (ssStyles) {
+        ssStyles.parentNode.removeChild(ssStyles);
+    }
 };
 
-exports.replaceRouterComponent = ({ history }) => {
+export const replaceRouterComponent = ({ history }: { history: History }): React.StatelessComponent => {
+    console.log('gatsby-browser: replaceRouterComponent')
     const store = createStore();
-
-    const ConnectedRouterWrapper = ({ children}) => (
+    return ({ children }) => (
         <Provider store={store}>
             <Router history={history}>{children}</Router>
         </Provider>
     );
-
-    return ConnectedRouterWrapper;
 };

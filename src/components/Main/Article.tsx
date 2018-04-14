@@ -1,0 +1,52 @@
+import * as React from "react";
+import injectSheet from "react-jss";
+import {Theme} from 'material-ui';
+
+const styles = (theme: Theme) => ({
+  article: {
+    background: theme.main.colors.background,
+    maxWidth: theme.main.sizes.articleMaxWidth,
+    margin: "0 auto",
+    padding: `calc(${theme.bars.sizes.infoBar}px + 1.5rem) 1.5rem  1.5rem 1.5rem`,
+    "& strong, & b": {
+      letterSpacing: "-.02em"
+    },
+    "& a": {
+      fontWeight: "bold",
+      letterSpacing: "-.02em",
+      textShadow: `
+           2px  2px ${theme.main.colors.background},
+          -2px  2px ${theme.main.colors.background},
+          -2px -2px ${theme.main.colors.background},
+          -2px  2px ${theme.main.colors.background},
+          -2px  0   ${theme.main.colors.background},
+           2px  0   ${theme.main.colors.background}
+        `,
+      display: "inline-block",
+      textDecoration: "none",
+      transition: "0.3s",
+      "&:hover": {
+        color: theme.base.colors.linkHover
+      }
+    },
+    [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
+      padding: `calc(2.5rem + ${theme.bars.sizes.infoBar}px) 3.5rem 2.5rem`
+    },
+    [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
+      padding: "3.5rem"
+    }
+  }
+});
+
+const Article = (props: ArticleProps) => {
+  const { children, classes } = props;
+
+  return <article className={classes.article}>{children}</article>;
+};
+
+interface ArticleProps {
+  classes: any;
+  children: any[];
+}
+
+export default injectSheet(styles)(Article);
